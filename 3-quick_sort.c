@@ -26,7 +26,7 @@ void swap_int(int *a, int *b)
 int l_part(int *array, int low, int high, size_t size)
 {
 	int pivot = array[high];
-	int i = (low - 1); 
+	int i = (low - 1);
 	int j = 0;
 
 	for (j = low; j < high; j++)
@@ -44,7 +44,7 @@ int l_part(int *array, int low, int high, size_t size)
 }
 
 /**
- * quickSort - Sort an array.
+ * quicksort - Sort an array.
  * @array: Is an array of integers.
  * @size: Is the size of the array.
  * @low: Is the lowest value on the array.
@@ -65,7 +65,7 @@ void quicksort(int *array, int low, int high, size_t size)
 }
 
 /**
- * quick_sort - orts an array of integers in ascending order.
+ * quick_sort - Sorts an array of integers in ascending order.
  * @array: Is an array of integers.
  * @size: Is the size of the array.
 */
