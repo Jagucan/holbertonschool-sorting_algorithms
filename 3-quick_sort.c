@@ -1,12 +1,26 @@
 #include "sort.h"
 
 /**
+ * swap_int - Swaps the values of two integers.
+ * @a: Is an interger.
+ * @b: Is another interger.
+*/
+
+void swap_int(int *a, int *b)
+{
+	int aux = *a;
+
+	*a = *b;
+	*b = aux;
+}
+
+/**
  * l_part - Implementation of lomuto.
- * @array: array to be sorted
- * @low: the first value on the array
- * @high: the last element on the array
- * @realsize: size of the array
- * Return: value of
+ * @array: Is an array of integers.
+ * @size: Is the size of the array.
+ * @low: Is the lowest value on the array.
+ * @high: Is the higtest value on the array.
+ * Return: Return an int.
 */
 
 int l_part(int *array, int low, int high, size_t size)
@@ -30,12 +44,11 @@ int l_part(int *array, int low, int high, size_t size)
 }
 
 /**
- *realquickSort -sort array
- *@array: the array to be sorted
- *@low: the first element on the array
- *@high: the last element on the array
- *@size: lenght of the array
- *Return: Nothing
+ * quickSort - Sort an array.
+ * @array: Is an array of integers.
+ * @size: Is the size of the array.
+ * @low: Is the lowest value on the array.
+ * @high: Is the higtest value on the array.
 */
 
 void quicksort(int *array, int low, int high, size_t size)
@@ -52,13 +65,14 @@ void quicksort(int *array, int low, int high, size_t size)
 }
 
 /**
- *quick_sort -sorting an array
- *@array: the array
- *@size: lenght of the array
- *Return: nothing
+ * quick_sort - orts an array of integers in ascending order.
+ * @array: Is an array of integers.
+ * @size: Is the size of the array.
 */
 
 void quick_sort(int *array, size_t size)
 {
-	quicksort(array, 0, size - 1, size);
+	int aux = size - 1;
+
+	quicksort(array, 0, aux, size);
 }
